@@ -18,7 +18,7 @@ const Kakao = () => {
     try {
       const res = await axios.get(
         `https://tastekim.shop/api/auth/kakao/callback?code=${code}`
-      , { withCredentials: true });
+      , {}, { withCredentials: true });
       const kakaoToken = res.data.accessToken;
       console.log(kakaoToken);
       localStorage.setItem('kakaotoken', kakaoToken);
