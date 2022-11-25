@@ -6,6 +6,9 @@ import { useCookies } from 'react-cookie';
 import { useEffect } from 'react';
 import Spinner from '../../elements/Spinner';
 
+axios.defaults.headers.common['Content-Type'] = 'application/x-www-form-urlencoded'
+axios.defaults.headers.common['Access-Control-Allow-Origin'] = '*';
+
 //리다이렉트 화면
 const Kakao = () => {
   const navigator = useNavigate();
