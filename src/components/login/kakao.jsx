@@ -27,7 +27,7 @@ const Kakao = () => {
         const res2 = await axios.post(
           `https://tastekim.shop/api/auth/kakao/callback?code=${code}`,
           {
-            
+            kakaoToken,
           },
           {
             headers: {
